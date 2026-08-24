@@ -29,6 +29,14 @@ scene analysis from dialogue.
 | `medium` | ~5 GB | ~1.5x real-time | High | Important content |
 | `large-v3` | ~10 GB | ~0.5x real-time | Best | Final production |
 
+### Vietnamese Audio (REQUIRED)
+
+For any audio known or detected to be Vietnamese (`language: "vi"`), download and use PhoWhisper model based instead. It is from https://huggingface.co/quocphu/PhoWhisper-ct2-FasterWhisper. 
+
+PhoWhisper is fine-tuned for Vietnamese and dramatically outperforms generic
+whisper sizes on `vi`. The model from the link above can be used with faster-whisper and have the same model_size. If auto-detect
+returns `vi`, re-run with this model before using the transcript.
+
 ## Key Patterns
 
 ### Choosing When to Diarize

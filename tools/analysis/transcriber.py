@@ -58,7 +58,21 @@ class Transcriber(BaseTool):
             "input_path": {"type": "string", "description": "Path to audio or video file"},
             "model_size": {
                 "type": "string",
-                "enum": ["tiny", "base", "small", "medium", "large-v2", "large-v3"],
+                "description": (
+                    "Standard size (tiny/base/small/medium/large-v2/large-v3), "
+                    "a CTranslate2 HF repo id (org/name), or an org/name/subfolder "
+                    "path into a multi-model HF repo. For Vietnamese audio use "
+                    "'quocphu/PhoWhisper-ct2-FasterWhisper/PhoWhisper-medium-ct2-fasterWhisper'."
+                ),
+                "enum": [
+                    "tiny",
+                    "base",
+                    "small",
+                    "medium",
+                    "large-v2",
+                    "large-v3",
+                    "quocphu/PhoWhisper-ct2-FasterWhisper/PhoWhisper-medium-ct2-fasterWhisper",
+                ],
                 "default": "base",
             },
             "language": {"type": "string", "description": "ISO 639-1 language code, or null for auto-detect"},
