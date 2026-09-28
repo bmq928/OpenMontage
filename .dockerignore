@@ -1,0 +1,11 @@
+.venv
+venv
+node_modules
+remotion-composer/node_modules
+projects
+output
+.git
+__pycache__
+*.pyc
+.env
+.DS_Store

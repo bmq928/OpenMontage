@@ -1,0 +1,16 @@
+services:
+  openmontage:
+    build: .
+    container_name: openmontage
+    working_dir: /app
+    ports:
+      - "4096:4096"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - /app/remotion-composer/node_modules
+      - /app/__pycache__
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
