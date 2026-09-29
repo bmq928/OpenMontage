@@ -1,4 +1,4 @@
-FROM python:3.11-slim-bookworm
+FROM python:3-slim
 
 ENV DEBIAN_FRONTEND=noninteractive \
     PYTHONDONTWRITEBYTECODE=1 \

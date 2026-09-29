@@ -9,8 +9,6 @@ services:
       - .env
     volumes:
       - .:/app
-      - /app/remotion-composer/node_modules
-      - /app/__pycache__
     stdin_open: true
     tty: true
     restart: unless-stopped
