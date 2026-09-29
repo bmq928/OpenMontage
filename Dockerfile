@@ -25,6 +25,7 @@ RUN mkdir -p /etc/apt/keyrings \
     && apt-get update && apt-get install -y --no-install-recommends nodejs \
     && rm -rf /var/lib/apt/lists/* \
     && node --version && npm --version
+    && npx skills add JuliusBrussee/caveman vercel-labs/agent-browser mvanhorn/last30days-skill -g 
 
 WORKDIR /app
 
