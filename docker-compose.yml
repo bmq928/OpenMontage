@@ -5,6 +5,8 @@ services:
     working_dir: /app
     ports:
       - "4096:4096"
+    # environment:
+    #   ALL_PROXY: socks5h://host.docker.internal:1080
     env_file:
       - .env
     volumes:
